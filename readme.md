@@ -15,3 +15,5 @@ sft阶段：
 
 
 [微调图像和文字](https://huggingface.co/datasets/jingyaogong/minimind-v_dataset/tree/main)[下载sft_data.jsonl 和 sft_images.zip]
+
+微调用我提供的脚步convert一下，变成share-gpt的格式！
