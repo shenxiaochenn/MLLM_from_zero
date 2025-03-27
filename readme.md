@@ -23,3 +23,7 @@ sft阶段：
 微调用我提供的脚步convert一下，变成share-gpt的格式！
 
 微调： CUDA_VISIBLE_DEVICES=1,2 accelerate launch --num_processes=2 sft_train.py
+
+测试：
+
+把 test.py 里面的图像和文字改一下就行。我这提供的是一个小老虎，没什么问题。
