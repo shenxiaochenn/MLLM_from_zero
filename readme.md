@@ -55,3 +55,14 @@ sft
 
 
 accelerate launch --num_processes=4 sft_train.py 
+
+强化学习后训练
+
+updating
+
+
+MOE 混合专家模型
+
+updating
+
+
