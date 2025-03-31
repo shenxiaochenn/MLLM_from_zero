@@ -32,3 +32,26 @@ sft阶段：
 **从零实现大语言模型,简单的方法！**
 
 可以自己写一个大语言模型并从头实现。我实现了基本的功能。并且可以完成一些日常的问答。代码在LLM_from_zero 文件夹中。模型是112M. 3090可以跑通！
+
+数据集：
+
+pretrain:
+
+[预训练数据](https://www.modelscope.cn/datasets/gongjy/minimind_dataset/files)[pretrain_hq.jsonl]
+
+
+accelerate launch --num_processes=4 pretrain.py 
+
+sft
+
+[微调数据](https://www.modelscope.cn/datasets/deepctrl/deepctrl-sft-data/files)[sft_data_zh.jsonl]
+
+使用这个微调数据，dataset选择 **SFTDataset_** 这个类，因为这个数据集比较大，同时是多轮对话数据，只包含中文的文本。  
+
+[微调数据可选](https://www.modelscope.cn/datasets/gongjy/minimind_dataset/files)[sft_1024.jsonl]
+
+
+使用这个微调数据，dataset选择 **SFTDataset** 这个类，数据集较小，但是中文效果可能没有那么好。  
+
+
+accelerate launch --num_processes=4 sft_train.py 
